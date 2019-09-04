@@ -17,8 +17,8 @@ cd ~/Documents/wsl
 git pull origin master
 cd ~/bin/checkmail
 git pull origin master
-cd ~/bin/infopane
-git pull origin master
+# cd ~/bin/infopane
+# git pull origin master
 cd ~/bin/update-repos
 git pull origin master
 cd ~/bin/vmlab
