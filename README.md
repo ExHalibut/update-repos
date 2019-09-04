@@ -12,5 +12,6 @@ A quick, dirty bash script to update all repos
 
   * ls --only-folders
   * Pipe to if has a .git dir
-  * git push
+  * Possibly a check to clone if dir doesn't exist
+  * Git pull
 
