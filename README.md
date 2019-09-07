@@ -2,11 +2,16 @@
 
 A quick, dirty bash script to update all repos
 
+## Requirements
+
+  * Git Up alias: `git config --global alias.up '!git remote update -p; git merge --ff-only @{u}'`
+  * repolist; a file containing a list of repositories with absolute paths and no empty line break at the end
+
 ## Current Features
 
-  * Check if a given directory exists
+  * Loop through paths in repolist file
   * cd into
-  * git push 
+  * git up
 
 ## Planned Features
 
