@@ -4,6 +4,7 @@
 # Set repo list with: export REPOLIST="/path/to/repolist"
 
 while read repo; do
+	echo "" && echo "Checking ${repo}" 
 	(cd "${repo}" && git checkout master && git up)
 done <$REPOLIST
 
