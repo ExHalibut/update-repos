@@ -5,7 +5,7 @@
 
 topdir=$1
 
-for i in $(find ~/ -name ".git"); do
+for i in $(find $topdir -name ".git"); do
     echo "";
     echo "${i%????}";
     cd "${i%????}";
