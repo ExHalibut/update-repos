@@ -5,9 +5,11 @@
 
 topdir=$1
 
-for i in $(find $topdir -name .git -exec dirname {} \; -prune); do
+for i in $(find . -name ".git" | cut -c 3-); do
     echo "";
     echo "$i";
+    cd "$i";
+    cd ..;
     git checkout master
     git up
 done
