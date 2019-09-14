@@ -1,10 +1,14 @@
 #!/bin/bash
-# Update specific known GitHub repositories
-# Requires git up: git config --global alias.up '!git remote update -p; git merge --ff-only @{u}'
-# Set repo list with: export REPOLIST="/path/to/repolist"
+# Update all git repositories beneath a given directory
+# Example: update-repos /opt
+# Example: update-repos ~/
 
-while read repo; do
-	echo "" && echo "Checking ${repo}" 
-	(cd "${repo}" && git checkout master && git up)
-done <$REPOLIST
+topdir=$1
+
+for i in $(find $topdir -name .git -exec dirname {} \; -prune); do
+    echo "";
+    echo "$i";
+    git checkout master
+    git up
+done
 
