@@ -5,11 +5,10 @@
 
 topdir=$1
 
-for i in $(find . -name ".git" | cut -c 3-); do
+for i in $(find ~/ -name ".git"); do
     echo "";
-    echo "$i";
-    cd "$i";
-    cd ..;
+    echo "${i%????}";
+    cd "${i%????}";
     git checkout master
     git up
 done
