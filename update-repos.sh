@@ -1,7 +1,9 @@
 #!/bin/bash
 # Update all git repositories beneath a given directory
-# Example: update-repos /opt
-# Example: update-repos ~/
+# Requires Git Up alias: git config --global alias.up '!git remote update -p; git merge --ff-only @{u}'
+# Usage Examples: 
+#    ./update-repos.sh /opt
+#    ./update-repos.sh ~/
 
 topdir=$1
 
