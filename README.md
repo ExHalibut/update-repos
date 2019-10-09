@@ -1,6 +1,6 @@
 # Update-Repos
 
-A quick, dirty bash script to update all repos
+A bash script to recursively find and update all Git repositories within a given directory
 
 ## Requirements
 
@@ -16,10 +16,10 @@ Call update-repos.sh and give it a path to search recursively
 ## Current Features
 
   * Search recursively through a given path to find .git directories
-  * cd into
-  * git up
+  * Change into those directories
+  * Run `git up` for each repository
 
 ## Planned Features
 
-  * ls --only-folders
+  * List-only: A switch such as `ls` or `--only-folders` to recursively list all git repositories in a given directory, but not to perform `git up` for each
 
