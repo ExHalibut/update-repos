@@ -21,5 +21,5 @@ Call update-repos.sh and give it a path to search recursively
 
 ## Planned Features
 
-Please see (enhancements)[https://github.com/ExHalibut/update-repos/labels/enhancement]
+Please see [enhancements](https://github.com/ExHalibut/update-repos/labels/enhancement)
 
