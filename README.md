@@ -2,7 +2,7 @@
 
 A bash script to recursively find and update all Git repositories within a given directory
 
-## Current Features
+## Features
 
   * Search recursively through a given path to find .git directories
   * Change into those directories
@@ -12,14 +12,10 @@ A bash script to recursively find and update all Git repositories within a given
 
 Git Up alias: `git config --global alias.up '!git remote update -p; git merge --ff-only @{u}'`
 
-## Usage
+## Usage Examples
 
 Call update-repos.sh and give it a path to search recursively
 
   * `./update-repos.sh /opt`
   * `./update-repos.sh ~/`
-
-## Planned Features
-
-Please see [enhancements](https://github.com/ExHalibut/update-repos/labels/enhancement)
 
