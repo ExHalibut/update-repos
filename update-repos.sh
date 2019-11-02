@@ -1,9 +1,10 @@
 #!/bin/bash
 
 display_usage() {
-    echo -e "\n Example Usage: ./update-repos ~/"
-    echo -e "\n                ./update-repos ~/bin"
-    echo -e "\n                ./update-repos /opt\n"
+    echo -e "\n Call update-repos.sh and give it a path to search recursively"
+    echo -e "\n Examples:  ./update-repos ~/"
+    echo -e "\n            ./update-repos ~/bin"
+    echo -e "\n            ./update-repos /opt\n"
 }
 
 if [  $# -le 1 ]
