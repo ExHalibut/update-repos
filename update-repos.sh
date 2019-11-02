@@ -6,8 +6,6 @@ display_usage() {
     echo -e "\n                ./update-repos /opt\n"
 }
 
-topdir=$1
-
 if [  $# -le 1 ]
 then
 	display_usage
@@ -19,6 +17,8 @@ then
 	display_usage
 	exit 0
 fi 
+
+topdir=$1
 
 for i in $(find $topdir -name ".git"); do
     echo "";
