@@ -17,4 +17,4 @@ Git Up alias: `git config --global alias.up '!git remote update -p; git merge --
 Call update-repos.sh and give it a path to search recursively
 
   * `./update-repos.sh ~/bin`
-  * './update-repos.sh /opt'
+  * `./update-repos.sh /opt`
