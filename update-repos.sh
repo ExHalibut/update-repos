@@ -6,13 +6,13 @@ display_usage() {
     echo -e "\n            ./update-repos /opt\n"
 }
 
-if [  $# -le 1 ]
+if [  -z "$1" ]
 then
 	display_usage
 	exit 1
 fi
 
-if [[ ( $# == "--help") ||  $# == "-h" ]]
+if [[ ( $1 == "--help") ||  $1 == "-h" ]]
 then
 	display_usage
 	exit 0
