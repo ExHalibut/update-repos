@@ -25,7 +25,7 @@ fi
 
 topdir=$1
 
-for i in $(find $topdir -name ".git"); do
+for i in $(find $topdir -name ".git" 2>/dev/null); do
     echo "";
     echo "${i%????}";
     cd "${i%????}";
