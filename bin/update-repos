@@ -1,9 +1,10 @@
 #!/bin/bash
 
 display_usage() {
-    echo -e "\n Call update-repos.sh and give it a path to search recursively"
-    echo -e "\n Examples:  ./update-repos ~/bin"
-    echo -e "\n            ./update-repos /opt\n"
+    echo -e "\n Recursively update github repositories within a given path"
+    echo -e " Examples:  $(basename $0) ~/bin"
+    echo -e "            $(basename $0) /opt\n"
+    exit
 }
 
 check_default_branch() {
