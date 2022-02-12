@@ -6,6 +6,11 @@ display_usage() {
     echo -e "\n            ./update-repos /opt\n"
 }
 
+check_default_branch() {
+    default_branch=$(git remote show REMOTE_REPO_NAME | grep 'HEAD branch' | cut -d' ' -f5)
+    echo -e "default branch detected as: $default_branch"
+}
+
 if [  -z "$1" ]
 then
 	display_usage
@@ -24,7 +29,7 @@ for i in $(find $topdir -name ".git"); do
     echo "";
     echo "${i%????}";
     cd "${i%????}";
-    git checkout main
+    git checkout $default_branch
     git up
 done
 
