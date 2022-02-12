@@ -1,6 +1,7 @@
 #!/bin/bash
 
 display_usage() {
+    echo " $(basename $0) [-h, --help] /path"
     echo -e "\n Recursively update github repositories within a given path"
     echo -e " Examples:  $(basename $0) ~/bin"
     echo -e "            $(basename $0) /opt\n"
