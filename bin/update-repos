@@ -7,8 +7,8 @@ display_usage() {
 }
 
 check_default_branch() {
-    default_branch=$(git remote show REMOTE_REPO_NAME | grep 'HEAD branch' | cut -d' ' -f5)
-    echo -e "default branch detected as: $default_branch"
+    default_branch=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
+    echo "default branch detected as: $default_branch"
 }
 
 if [  -z "$1" ]
@@ -29,6 +29,7 @@ for i in $(find $topdir -name ".git" 2>/dev/null); do
     echo "";
     echo "${i%????}";
     cd "${i%????}";
+    check_default_branch
     git checkout $default_branch
     git up
 done
